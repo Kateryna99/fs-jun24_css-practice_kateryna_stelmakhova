@@ -1,5 +1,5 @@
 $colorWhite: #fff;
-$fontWeightBold:700;
+$fontWeightBold: 700;
 
 body {
   font-family: 'Arial', sans-serif;
@@ -24,11 +24,11 @@ body {
     grid-template-columns: repeat(2, minmax(0, 200px));
     justify-content: center;
     align-items: center;
-    gap: 40px 30px;
+    gap: 20px;
 
 
     @media (min-width: 1000px) {
-      grid-template-columns: repeat(4,minmax(0,1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 }
@@ -38,6 +38,23 @@ body {
   flex-direction: column;
   gap: 8px;
 
+  padding: 10px 10px 16px;
+  transition-duration: .3s;
+
+  &:hover {
+    transform: scale(1.2);
+    border-radius: 10px;
+    background-color: #EEEEEE;
+
+    .person-card__photo{
+      border-radius: 60px;
+    }
+
+    .person-card__extra {
+      visibility: visible;
+    }
+  }
+
   &__photo {
     position: relative;
     aspect-ratio: 1;
@@ -45,6 +62,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
 
+    transition: border 1s;
 
     &::before {
       content: attr(data-number);
@@ -94,6 +112,6 @@ body {
   }
 
   &__extra {
-    display: none;
+    visibility: hidden;
   }
 }
