@@ -101,7 +101,7 @@ body {
   }
 
   &__extra {
-    transform: translateY(200%);
+    visibility: hidden;
 
     text-align: center;
   }
@@ -135,7 +135,7 @@ body {
     }
 
     .person-card__extra {
-      transform: translateY(0);
+      visibility: visible;
     }
   }
 }
