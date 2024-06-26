@@ -86,8 +86,8 @@ body {
 }
 
 .person-card__extra {
+  visibility: hidden;
   text-align: center;
-  transform: translateY(200%);
 }
 
 .person-card__sport:after {
@@ -117,6 +117,6 @@ body {
 }
 
 .person-card:hover .person-card__extra {
-  transform: translateY(0);
+  visibility: visible;
 }
 /*# sourceMappingURL=index.b1276d39.css.map */
