@@ -39,7 +39,7 @@ body {
   gap: 8px;
 
   padding: 10px 10px 16px;
-  transition-duration: .3s;
+  transition: transform 1s;
   overflow: hidden;
 
   &__photo {
