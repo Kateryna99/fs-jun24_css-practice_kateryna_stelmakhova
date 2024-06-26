@@ -101,9 +101,25 @@ body {
   }
 
   &__extra {
-    visibility: hidden;
+    transform: translateY(200%);
+
+    text-align: center;
   }
 
+  &__sport{
+    &::after{
+      content: ',';
+    }
+  }
+
+  &__pay{
+   &::before{
+     content: '$';
+   }
+    &::after{
+      content: 'M';
+    }
+  }
 
   &:hover {
     transform: scale(1.2);
@@ -119,7 +135,7 @@ body {
     }
 
     .person-card__extra {
-      visibility: visible;
+      transform: translateY(0);
     }
   }
 }
