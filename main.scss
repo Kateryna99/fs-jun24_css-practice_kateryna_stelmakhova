@@ -1,3 +1,7 @@
+
+$colorWhite: #fff;
+
+
 .people {
   &__container {
     max-width: 925px;
@@ -16,9 +20,35 @@
 
 .person-card {
   &__photo {
+    position: relative;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+
+    &::before{
+      content: '';
+
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      display: block;
+
+      width: 32px;
+      height: 32px;
+
+      background-color: ;
+    }
   }
 
   &__img {
+    width: 100%;
+    height: 100%;
+
+    object-position: center;
+    object-fit: cover;
   }
 
   &__details {
