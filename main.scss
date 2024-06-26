@@ -1,1 +1,38 @@
+.people {
+  &__container {
+    max-width: 925px;
+    width: 100%;
 
+    padding: 0 35px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,200px));
+    gap: 30px;
+  }
+}
+
+.person-card {
+  &__photo {
+  }
+
+  &__img {
+  }
+
+  &__details {
+  }
+
+  &__name {
+  }
+
+  &__extra {
+  }
+
+  &__sport {
+  }
+
+  &__pay {
+  }
+}
