@@ -24,7 +24,7 @@ body {
     grid-template-columns: repeat(2, minmax(0, 200px));
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 
 
     @media (min-width: 1000px) {
@@ -40,29 +40,17 @@ body {
 
   padding: 10px 10px 16px;
   transition-duration: .3s;
-
-  &:hover {
-    transform: scale(1.2);
-    border-radius: 10px;
-    background-color: #EEEEEE;
-
-    .person-card__photo{
-      border-radius: 60px;
-    }
-
-    .person-card__extra {
-      visibility: visible;
-    }
-  }
+  overflow: hidden;
 
   &__photo {
     position: relative;
+    z-index: -1;
     aspect-ratio: 1;
 
     border-radius: 50%;
     overflow: hidden;
 
-    transition: border 1s;
+    transition: border-radius 1s;
 
     &::before {
       content: attr(data-number);
@@ -70,6 +58,7 @@ body {
       position: absolute;
       right: 10px;
       top: calc(50% - 16px);
+      z-index: 2;
 
       display: flex;
       justify-content: center;
@@ -113,5 +102,24 @@ body {
 
   &__extra {
     visibility: hidden;
+  }
+
+
+  &:hover {
+    transform: scale(1.2);
+    border-radius: 10px;
+    background-color: #EEEEEE;
+
+    .person-card__photo {
+      border-radius: 60px;
+    }
+
+    .person-card__img{
+      transform: scale(1.1);
+    }
+
+    .person-card__extra {
+      visibility: visible;
+    }
   }
 }
